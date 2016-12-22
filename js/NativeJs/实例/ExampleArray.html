@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array</title>
+		<script type="text/javascript">
+		//1.子数组中搜索
+			/*var xxx = ['a','b','c','a'];
+			alert(xxx.indexOf('a'));
+			alert(xxx.lastIndexOf('a'));
+			alert(xxx.indexOf('a',2));
+			alert(xxx.lastIndexOf('a',2));*/
+		//2.二维数组扁平化
+			/*var arr = [['a','b'],['c','d'],['f','d','f']];
+			alert(arr.concat());*/
+		//3.删除或替换元素
+			//splice(索引，数量，替换词)
+			/*var arr = ['a','b','c','d','a'];
+			//arr.splice(2)
+			while(arr.indexOf('a') !== -1){
+				arr.splice(arr.indexOf('a'),1,'xxx');  
+			} 
+			alert(arr);*/
+		//4.提取数组的一部分
+		    /*var arr = ['a','b','c','d','a'];
+			alert(arr.slice(0,3));*/
+		//5.字符串使用forEach方法	
+		   /*var a = 'aaa'; 
+			[].forEach.call(a,function(a,b,c){
+				alert(c[b])
+			})*/
+		//6.对每个数组元素执行一个函数并返回一个新数组
+		    /*var arr = [20,40];
+			var xxx = arr.map(function(ele){
+				return ele.toString(16);
+			})
+			alert(xxx);*/
+		//7.过滤数组
+		    /*var arr = [20,40];
+			var xxx = arr.filter(function(ele,index,array){
+				return (ele !== 20);
+			})
+			alert(xxx);*/
+		//8.验证数组内容
+			/*var arr = ['a','b','c'];
+			var reg = /^[a-zA-Z]+$/
+			var xxx = arr.every(function(e,i,a){
+				return reg.test(e);
+			})
+			alert(xxx);*/
+			/********************************************/
+			/*var arr = ['a','b',1];
+			var reg = /^[a-zA-Z]+$/
+			var xxx = arr.some(function(e,i,a){
+				return reg.test(e);
+			})
+			alert(xxx);*/
+		//9.使用一个关联数组来存储表单元素的名和值
+			/*<form id="form">
+				<label>1</label> <input type="text" id="1"/> </br>
+				<label>2</label> <input type="text" id="2"/> </br>
+				<label>3</label> <input type="text" id="3"/> </br>
+				<button id="bt">click</button>
+			</form>
+			<div id="fuck"></div>
+			window.onload = function(){
+				//对象：{id: value}  数组：对象的keys 内容：数组元素+对象[数组元素]
+				document.getElementById("bt").addEventListener('click',function(event){
+					event.preventDefault();
+					var eles = document.getElementById('form');
+					var objArray = new Object();
+					var str = '';
+					for(var i=0; i<eles.length; i++){
+						if(eles[i].type == 'text') { objArray[eles[i].id] = eles[i].value }
+					}
+					Object.keys(objArray).forEach(function(key){
+						var value = objArray[key];
+						str += key + '-->' + value +'</br>';
+					})
+					document.getElementById("fuck").innerHTML = str;
+				})
+			}*/
+		//10.使用一个定时器和回调函数防止代码阻塞
+			/*function a(x){
+				console.log(x);
+			}
+			function b(n,callback){
+				setTimeout(function(){
+					if(callback && typeof callback == 'function'){
+							callback();
+						}
+					}
+					,0)
+			}
+			console.log(1);
+			b(1,function(){
+				console.log('b1');
+				b(2,function(){
+					console.log('b11');
+				})
+			})
+			console.log(2);
+			b(3,function(){
+					console.log('b2');
+			})
+		 	console.log(3);*/
+		//11.(函数参数，nodeList)类似数组转换为数组	
+			/*function aaa(a,b){
+				console.log([].slice.call(arguments) instanceof Array);
+			}
+			aaa(1,2);*/
+			/*alert([].slice.call( document.querySelectorAll('div') ) instanceof Array);*/
+		//12.js最大缺陷之一：缺少默认参数  亲测firfox支持	
+			/*function a(a, b = "'", c = "'"){
+				alert(b + a);
+			}
+			a(1);*/
+		//13.
+
+		window.onload = function(){
+
+		}
+		</script>
+	</head>
+	<body>
+		<a>
+			1
+		</a>
+		<div>
+			1
+		</div>
+	</body>
+</html>

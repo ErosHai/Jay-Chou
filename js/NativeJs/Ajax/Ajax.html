@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload = function(){
+			var request = new XMLHttpRequest();
+			request.open("GET", "https://www.baidu.com/");
+			request.send();   
+			request.onreadystatechange = function() {
+				if (request.readyState===4) {		//响应完成
+					if (request.status===200) { 	//请求成功  
+						alert( 123 );
+					} else {
+						alert("发生错误：" + request.status);
+					}
+				} 
+			}
+		}
+	</script>
+	<body>
+	</body>
+</html>

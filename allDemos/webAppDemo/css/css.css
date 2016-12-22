@@ -1,0 +1,9 @@
+/*居中*/
+.window_boundBox {
+	left: 50%;
+	width: x;
+	margin-left: -0.5x;
+}
+
+/*媒体查询*/
+@media screen and (min-width: 375px){}

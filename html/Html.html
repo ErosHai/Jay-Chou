@@ -1,0 +1,14 @@
+<meta charset="UTF-8" http-equiv="refresh" content="10">  <!--刷新-->
+
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<!--屏幕宽度=html宽度 ，初始缩放比例，最大缩放比例，最小缩放比例，不可以缩放-->
+	
+overflow-x: hidden;  <!--横向滚动条-->	
+
+<!--流式响应式布局：width: 百分比 height: @media -->
+<!--webkit-min-device-pixel-ratio:2 -->
+@media screen and (min-width: 375px){}
+
+<!--rem响应式布局-->
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+

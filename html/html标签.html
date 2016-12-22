@@ -1,0 +1,56 @@
+<form method="post" action="save.php">
+        <label for="username">用户名:</label>
+        <input type="text" name="username" />
+        <label for="pass">密码:</label>
+        <input type="password" name="pass" />
+</form>
+注意:
+1、所有表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在 <form></form> 标签之间（否则用户输入的信息可提交不到服务器上哦！）。
+2、method : post/get 的区别这一部分内容属于后端程序员考虑的问题。
+//文本域
+<form action="save.php" method="post" >
+    <label>个人简介：</label>
+    <textarea cols="x" rows="y">在这里输入内容...</textarea>
+    <input type="submit" value="确定"  name="submit" />
+    <input type="reset" value="重置"  name="reset" />
+</form> 
+//单选框
+<form action="save.php" method="post" >
+    <label>性别:</label>
+    <label>男</label>
+    <input type="radio" value="1"  name="gender" />
+    <label>女</label>
+    <input type="radio" value="2"  name="gender" />
+</form>
+1、type:
+   当 type="radio" 时，控件为单选框
+   当 type="checkbox" 时，控件为复选框
+2、value：提交数据到服务器的值（后台使用）
+3、name：为控件命名，以备后台程序使用
+4、checked：当设置 checked="checked" 时，该选项被默认选中
+注意:同一组的单选按钮，name 取值一定要一致,这样同一组的单选按钮才可以起到单选的作用。
+//下拉菜单
+<form action="save.php" method="post" >
+	<label>爱好:</label>
+    <select>
+      <option value="看书">看书</option>
+      <option value="旅游">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+</form>
+
+在<select>标签中设置multiple="multiple"属性，就可以实现多选功能，在 windows 操作系统下，
+进行多选时按下Ctrl键同时进行单击（在 Mac下使用 Command +单击），可以选择多个选项。
+//提交和重置按钮
+<form  method="post" action="save.php">
+    <label for="myName">姓名：</label>
+    <input type="text" value=" " name="myName " />
+    <input type="submit" value="提交" name="submitBtn" />
+    <input type="reset" value="重置">
+</form>
+//label标签
+<label for="控件id名称">
+label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。
+就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上
+（就自动选中和该label标签相关连的表单控件上）。	
